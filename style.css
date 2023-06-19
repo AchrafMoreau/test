@@ -1,0 +1,95 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    background-color: rgb(171, 171, 171);
+    position: relative;
+}
+body::after{
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: 10%;
+    left: 18%;
+    z-index: -1;
+    background: linear-gradient(blue, rgba(200, 0, 255, 0.76), rgb(5, 5, 113));
+    border: none;
+    box-shadow: 10px 10px 20px inset wheat, 10px 10px 10px black;
+}
+body::before{
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: 50%;
+    right: 18%;
+    z-index: -1;
+    background: linear-gradient(blue, rgba(200, 0, 255, 0.76), rgb(5, 5, 113));
+    box-shadow: 10px 10px 20px inset wheat, 10px 10px 10px black;
+}
+
+
+
+.container{
+    position: absolute;
+    width: 510px;
+    height: 590px;
+    transform: translateY(-2px);
+    background-color: rgba(0, 175, 146, 0.574);
+}
+.interface{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.play *{
+    /* border: 1px solid red; */
+}
+
+
+button{
+    color: aliceblue;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    background:linear-gradient(rgb(1, 97, 110), rgb(219, 175, 1));
+    border-radius: 20px;
+    box-shadow: 20px 20px 10px black;
+    transition: all .5s;
+    border:1px solid transparent;
+}
+button:hover{
+    background: none;
+    border: 1px solid;
+}
+button:active{
+    scale: 0.98;
+}
+.gameOver{
+    display: none;
+}
+#canvas{
+    box-shadow: 0px 0px 30px ;
+}
+
+@keyframes boble {
+    0%, 100%{
+        top: 20%;
+    }
+    25%{
+        top: 30%;
+    }
+    50%{
+        top: 40%;
+    }
+    75%{
+        top: 50%;
+    }
+}
